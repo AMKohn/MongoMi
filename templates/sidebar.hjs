@@ -1,0 +1,31 @@
+<ul class="servers">
+	{{#servers}}
+		<li data-type="server" title="{{name}}&#010;Host: {{host}}&#010;Port: {{port}}"{{#open}} class="open"{{/open}}>
+			<span class="name">{{name}}</span>
+
+			<span class="db-count">{{databases.length}}</span>
+
+			<ul>
+				{{#databases}}
+					<li data-type="db"{{#open}} class="open"{{/open}}>
+						<span class="name">{{name}}</span>
+
+						<ul>
+							{{#collections}}
+								<li data-type="{{#type}}{{type}}{{/type}}{{^type}}collection{{/type}}"{{#open}} class="open"{{/open}}>
+									<span class="name">{{name}}</span>
+
+									<ul>
+										{{#indexes}}
+											<li data-type="{{#internal}}internal-{{/internal}}index">{{name}}</li>
+										{{/indexes}}
+									</ul>
+								</li>
+							{{/collections}}
+						</ul>
+					</li>
+				{{/databases}}
+			</ul>
+		</li>
+	{{/servers}}
+</ul>

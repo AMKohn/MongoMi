@@ -1,0 +1,56 @@
+# Aggregate -> project
+snippet $project
+	{ \$project: {
+		${1:field}: ${2:1}
+	} }
+
+# Aggregate -> match
+snippet $match
+	{ \$match: {
+		${1:// Query here}
+	} }
+
+# Aggregate -> redact
+snippet $redact
+	{ \$redact: {
+		$cond: {
+			if: { ${1:/* condition */} },
+			then: ${2:"\$\$PRUNE"},
+			else: ${3:"\$\$DESCEND"}
+		}
+	} }
+
+# Aggregate -> limit
+snippet $limit
+	{ \$limit: ${1:5} }
+
+# Aggregate -> skip
+snippet $skip
+	{ \$skip: ${1:5} }
+
+# Aggregate -> unwind
+snippet $unwind
+	{ \$unwind: "\$${1:field}" }
+
+# Aggregate -> group
+snippet $group
+	{ \$group: {
+		_id: ${1:null},
+		${2:count}: ${3:{ \$sum: 1 \}}
+	} }
+
+# Aggregate -> sort
+snippet $sort
+	{ \$sort: {
+		${1:field}: ${2:1}
+	} }
+
+# Aggregate -> geoNear
+snippet $geoNear
+	{ \$geoNear: {
+		${1:// params...}
+	} }
+
+# Aggregate -> out
+snippet $out
+	{ \$out: "${1:collection}" }

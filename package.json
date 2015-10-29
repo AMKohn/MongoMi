@@ -1,0 +1,21 @@
+{
+  "name": "nw-demo",
+  "version": "0.0.1",
+  "main": "app.html",
+  "window": {
+    "width": 1750,
+    "height": 1000,
+    "toolbar": false
+  },
+  "devDependencies": {
+    "nw": "^0.12.3",
+    "nw-dev": "^1.2.3"
+  },
+  "dependencies": {
+    "backbone": "^1.2.2",
+    "backbone.marionette": "^2.4.2",
+    "hogan.js": "^3.0.2",
+    "jquery": "^2.1.4",
+    "requirejs": "AMKohn/r.js#patch-2"
+  }
+}

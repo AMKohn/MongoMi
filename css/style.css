@@ -1,0 +1,499 @@
+/*---------------------------------------------
+	/ Fonts
+*/
+@font-face {
+	font-weight: 200;
+	font-style: normal;
+	font-family: "Roboto";
+	src: url("../fonts/RobotoLight.woff") format("woff");
+}
+
+@font-face {
+	font-weight: 400;
+	font-style: normal;
+	font-family: "Roboto";
+	src: url("../fonts/RobotoNormal.woff") format("woff");
+}
+
+@font-face {
+	font-weight: 500;
+	font-style: normal;
+	font-family: "Roboto";
+	src: url("../fonts/RobotoMedium.woff") format("woff");
+}
+
+@font-face {
+	font-weight: 700;
+	font-style: normal;
+	font-family: "Roboto";
+	src: url("../fonts/RobotoBold.woff") format("woff");
+}
+
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Normalize
+
+	normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
+*/
+img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0;}
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Base Styles
+*/
+body {
+	display: flex;
+	color: #212121;
+	cursor: default;
+	font-size: 13px;
+	line-height: 1.4;
+	min-height: 100vh;
+	flex-direction: column;
+	-webkit-user-select: none;
+	font-family: Roboto, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	display: flex;
+	flex: 1;
+}
+
+main .tabs {
+	flex: 1;
+	overflow: hidden;
+	position: relative;
+}
+
+
+
+
+
+/*---------------------------------------------
+	/ Material Buttons
+*/
+button.material {
+	border: 0;
+	outline: 0;
+	margin: 0 8px;
+	padding: 0 16px;
+	cursor: pointer;
+	min-width: 80px;
+	font-size: 13px;
+	background: #EEE;
+	font-weight: 500;
+	line-height: 32px;
+	border-radius: 2px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Roboto, sans-serif;
+	transition: all .15s ease-in-out;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+button.material:hover,
+button.material:focus,
+button.material:active {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+button.material:active {
+	background: #E0E0E0;
+}
+
+button.material.disabled,
+button.material[disabled] {
+	cursor: default;
+	box-shadow: none;
+	color: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.12);
+}
+
+button.material svg {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+}
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Material Buttons / Floating Action Button
+*/
+button.material.fab {
+	width: 40px;
+	height: 40px;
+	padding: 8px;
+	min-width: initial;
+	border-radius: 50%;
+}
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Material Buttons / Colors
+*/
+button.material.red,
+button.material.blue,
+button.material.green,
+button.material.orange {
+	color: #FFF;
+}
+
+button.material.red				{ background: #F44336; }
+button.material.red:active		{ background: #E53935; }
+
+button.material.blue			{ background: #2196F3; }
+button.material.blue:active		{ background: #1E88E5; }
+
+button.material.green			{ background: #4CAF50; }
+button.material.green:active	{ background: #43A047; }
+
+button.material.orange			{ background: #FF9800; }
+button.material.orange:active	{ background: #FB8C00; }
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Material Buttons / Flat
+*/
+button.material.flat {
+	background: none;
+	box-shadow: none;
+	border-radius: 0;
+	line-height: 32px;
+}
+
+button.material.flat:hover,
+button.material.flat:focus {
+	background: rgba(0, 0, 0, 0.075);
+}
+
+button.material.flat:active {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+button.material.flat.red	{ color: #F44336; }
+button.material.flat.blue	{ color: #2196F3; }
+button.material.flat.green	{ color: #4CAF50; }
+button.material.flat.orange	{ color: #FF9800; }
+
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Material Buttons / Icon Toggle
+*/
+button.material.toggle {
+	width: 36px;
+	color: #000;
+	height: 36px;
+	padding: 6px;
+	margin: 0 4px;
+	box-shadow: none;
+	position: relative;
+	min-width: initial;
+	border-radius: 50%;
+	background: transparent;
+	transition: all .2s ease;
+}
+
+button.material.toggle svg {
+	opacity: .7;
+}
+
+button.material.toggle:after,
+button.material.toggle:before {
+	position: absolute;
+	border-radius: 50%;
+	background: currentColor;
+	transition: opacity .2s ease;
+}
+
+button.material.toggle:before {
+	top: 50%;
+	width: 0;
+	left: 50%;
+	height: 0;
+	content: "";
+	opacity: 0.1;
+	border-radius: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+button.material.toggle:active:before {
+	width: 100%;
+	height: 100%;
+	opacity: .05;
+	transition: width .2s ease, height .2s ease;
+}
+
+button.material.toggle:hover:after,
+button.material.toggle:focus:after {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	opacity: .05;
+}
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Toolbar
+*/
+header.toolbar {
+	z-index: 2;
+	height: 48px;
+	display: flex;
+	flex-basis: 48px;
+	line-height: 48px;
+	position: relative;
+	background: #F9F9F9;
+	flex-flow: row wrap;
+	border-top: 1px solid #EEE;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, .3);
+}
+
+.toolbar .tools {
+	padding: 0 20px;
+	flex-basis: 260px;
+	margin-right: 5px;
+	border-right: 1px solid #DBDBDB;
+}
+
+.toolbar .tabs {
+	flex: 1;
+	margin: 0;
+	padding: 0;
+	height: inherit;
+}
+
+.toolbar .tabs li {
+	opacity: .6;
+	width: 175px;
+	height: inherit;
+	padding: 0 15px;
+	position: relative;
+	display: inline-block;
+	transition: all .2s ease;
+}
+
+.toolbar .tabs li:hover {
+	opacity: 1;
+	box-shadow: inset 0 -2px #2196F3;
+}
+
+.toolbar .tabs li.active {
+	opacity: 1;
+	background: #FFF;
+	box-shadow: inset 0 -2px #2196F3;
+}
+
+.toolbar .tabs li .name {
+	overflow: hidden;
+	white-space: nowrap;
+	display: inline-block;
+	text-overflow: ellipsis;
+	width: calc(100% - 20px);
+}
+
+.toolbar .tabs li .close {
+	border: 0;
+	padding: 0;
+	outline: 0;
+	right: 10px;
+	opacity: .6;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	position: absolute;
+	top: calc(50% - 10px);
+	background: transparent;
+}
+
+.toolbar .tabs li .close:hover {
+	opacity: .8;
+}
+
+.toolbar .tabs li .close svg {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Sidebar
+*/
+nav.sidebar {
+	flex-basis: 300px;
+	border-right: 1px solid #DBDBDB;
+}
+
+.sidebar .appname {
+	margin: 0;
+	padding: 0 25px;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 47px;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.sidebar ul.servers {
+	padding: 0;
+	margin: 8px 0;
+	line-height: 25px;
+}
+
+.sidebar .servers ul {
+	padding-left: 25px;
+}
+
+.sidebar .servers li:not(.open) > ul {
+	display: none;
+}
+
+.sidebar .servers > li {
+	padding: 8px 25px;
+}
+
+.sidebar .servers li {
+	display: block;
+	cursor: pointer;
+}
+
+.sidebar .servers li .name {
+	font-weight: bold;
+}
+
+.sidebar .servers li .db-count {
+	float: right;
+}
+
+
+
+
+
+
+
+/*---------------------------------------------
+	/ Tabs
+*/
+.tabs .tab {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	position: absolute;
+	flex-direction: column;
+}
+
+.tabs .tab.active {
+	display: flex;
+}
+
+.tab .shell {
+	z-index: 1;
+	position: relative;
+	padding: 0 10px 10px;
+}
+
+.tab .shell header {
+	line-height: 20px;
+	position: relative;
+	padding: 10px 8px 8px;
+}
+
+.tab .shell .info span {
+	padding-right: 10px;
+	display: inline-block;
+}
+
+.tab .shell .info span .icon {
+	width: 18px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: bottom;
+	fill: rgba(0, 0, 0, .7);
+}
+
+.tab .shell .pagination {
+	float: right;
+}
+
+.tab .shell button.execute {
+	top: 2px;
+	margin: 0;
+	right: 4px;
+	z-index: 1;
+	position: absolute;
+}
+
+.tab .results-wrapper {
+	flex: 1;
+	z-index: 0;
+	position: relative;
+}
+
+.tab .results-wrapper .editor {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+.ace_scrollbar::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.ace_scrollbar::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, .15);
+}
+
+.ace_scrollbar::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, .3);
+}
+
+.ace_scrollbar::-webkit-scrollbar-thumb:active {
+	background: rgba(255, 255, 255, .2);
+}

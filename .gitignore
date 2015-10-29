@@ -1,0 +1,6 @@
+.grunt
+Thumbs.db
+node_modules
+!node_modules/lib
+!node_modules/models
+!node_modules/routes

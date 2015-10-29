@@ -1,0 +1,13 @@
+# aggregate
+snippet aggregate()
+	aggregate([
+		${1:// pipeline...}
+	])
+
+# find
+snippet find()
+	find(${4:{
+		${1:// query}
+	\}${3:, {
+		${2:// fields}
+	\}}})
